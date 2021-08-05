@@ -101,7 +101,8 @@ nav {
   .logoAxie {
     z-index: 95;
     margin: auto;
-    right: 20%;
+    right: 0;
+    left: 0;
     top: 45%;
     position: fixed;
     width: 50vh !important;
@@ -109,7 +110,8 @@ nav {
   .float {
     z-index: 99;
     margin: auto;
-    right: 32.3%;
+    right: 0;
+    left: 0;
     top: 19%;
     position: fixed;
   }
@@ -120,15 +122,44 @@ nav {
 
 /* Para 600px */
 
-@media only screen and (max-width: 620px) and (min-width: 501px) {}
+@media only screen and (max-width: 620px) and (min-width: 501px) {
+  .Logo {
+    width: 20vh;
+  }
+}
 
 /* Para 480px */
 
-@media only screen and (max-width: 500px) and (min-width: 341px) {}
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+  .Logo {
+    z-index: 99;
+    margin: auto;
+    top: -40vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 30vh;
+  }
+  .logoAxie {
+    z-index: 80;
+    margin: auto;
+    right: 0;
+    left: 2vh;
+    top: 35vh;
+    bottom: 0;
+    position: fixed;
+    width: 50vh !important;
+  }
+}
 
 /* Para 320px */
 
-@media only screen and (max-width: 340px) and (min-width: 5px) {}
+@media only screen and (max-width: 340px) and (min-width: 5px) {
+  .Logo {
+    width: 10vh;
+  }
+}
 
 .Logo {
   z-index: 95;

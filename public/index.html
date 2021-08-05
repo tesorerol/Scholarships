@@ -21,11 +21,18 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <audio id="bgAudio" autoplay>
+  <audio id="bgAudio" loop>
     <source src="https://files-ralph.s3.us-east-2.amazonaws.com/bg.wav" type="audio/wav" />
     Your browser does not support the audio element.
   </audio>
-  <script>document.getElementById("bgAudio").volume = 0.3;</script>
+  <script>
+    var audio = document.getElementById("bgAudio");
+    audio.volume = 0.3;
+    setTimeout(() => {
+      audio.play();
+    }, 1500);
+
+  </script>
 </body>
 
 </html>
