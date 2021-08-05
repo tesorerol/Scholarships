@@ -109,7 +109,13 @@ function App() {
     aceptBio: false,
   });
   useEffect(() => {
-    setSocket(io(server))
+    setSocket(io(server, {
+      cors: {
+        origin: "*",
+        methods: ["GET", "POST"]
+      }
+    }
+    ))
   }, [])
   function Transition() {
     var axie = document.getElementById("axie");
