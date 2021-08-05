@@ -21,16 +21,54 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <audio id="bgAudio" loop>
-    <source src="https://files-ralph.s3.us-east-2.amazonaws.com/bg.wav" type="audio/wav" />
-    Your browser does not support the audio element.
-  </audio>
+  <div class="alert">
+    <p>Esta pagina contiene sonido de fondo</p>
+    <p class="buttons">
+      <button value="0">bloquear</button>
+      <button value="1">Permitir</button>
+    </p>
+  </div>
+  <!-- <button id="btn">trigger notification</button> -->
   <script>
-    var audio = document.getElementById("bgAudio");
-    audio.volume = 0.3;
-    setTimeout(() => {
-      // audio.play();
-    }, 1500);
+    const audio = new Audio( 'https://files-ralph.s3.us-east-2.amazonaws.com/bg.mp3' );
+    const alert_elem = document.querySelector('.alert');
+
+    audio.play().then(() => {
+      // already allowed
+      alert_elem.remove();
+      // resetAudio();
+    })
+      .catch(() => {
+        // need user interaction
+        setTimeout(() => {
+          audio.play();
+          console.log("audio enviado")
+        }, 3000);
+        alert_elem.addEventListener('click', ({ target }) => {
+          if (target.matches('button')) {
+            const allowed = target.value === "1";
+            if (allowed) {
+              audio.play();
+            }
+            alert_elem.remove();
+          }
+        });
+      });
+
+    document.getElementById('btn').addEventListener('click', (e) => {
+      if (audio.muted) {
+        console.log('silent notification');
+      }
+      else {
+        audio.play();
+      }
+    });
+
+    function resetAudio() {
+      audio.pause();
+      audio.currentTime = 0;
+      audio.muted = false;
+    }
 
   </script>
 </body>

@@ -22,6 +22,7 @@ import axie7 from './axie7.png';
 import loading from './loading.gif';
 import success from './success.gif';
 import io from 'socket.io-client';
+import ReactAudioPlayer from 'react-audio-player';
 const server = "https://api.cryptoclubsignal.com/";
 // const server = "http://localhost:3002";
 
@@ -143,7 +144,7 @@ function App() {
           title: 'Oops...',
           text: 'Ocurrio un error, por favor intente luego!',
         })
-        
+
       }
     })
     setTimeout(() => {
@@ -183,6 +184,11 @@ function App() {
       onLoading={this.handleSongLoading}
       onPlaying={this.handleSongPlaying}
       onFinishedPlaying={this.handleSongFinishedPlaying}
+      /> */}
+
+      {/* <ReactAudioPlayer
+        src="https://files-ralph.s3.us-east-2.amazonaws.com/bg.wav"
+        autoPlay
       /> */}
     </div>
   );
