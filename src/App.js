@@ -126,19 +126,19 @@ function App() {
         </div>
 
         : <Home Transition={Transition} />}
-      <Sound
+        {/* <Sound
         url="https://files-ralph.s3.us-east-2.amazonaws.com/bg.wav"
         playStatus={Sound.status.PLAYING}
-        // playFromPosition={300 /* in milliseconds */}
+        playFromPosition={300}
         autoLoad={true}
         loop={true}
-        volume={60}
-      // onLoading={this.handleSongLoading}
-      // onPlaying={this.handleSongPlaying}
-      // onFinishedPlaying={this.handleSongFinishedPlaying}
-      />
+        volume={5}
+      onLoading={this.handleSongLoading}
+      onPlaying={this.handleSongPlaying}
+      onFinishedPlaying={this.handleSongFinishedPlaying}
+      /> */}
     </div>
-  );
+      );
 }
 
-export default App;
+      export default App;
