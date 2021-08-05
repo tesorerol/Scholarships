@@ -12,7 +12,6 @@ import Biografia from './Forms/biografia';
 import Documentos from './Forms/documentos';
 import Swal from 'sweetalert2';
 import Sound from 'react-sound';
-import sonido from './bg.wav';
 const Nav = (props) => {
   const dots = [];
   for (let i = 1; i <= props.totalSteps; i += 1) {
@@ -128,7 +127,7 @@ function App() {
 
         : <Home Transition={Transition} />}
       <Sound
-        url={sonido}
+        url="https://files-ralph.s3.us-east-2.amazonaws.com/bg.wav"
         playStatus={Sound.status.PLAYING}
         // playFromPosition={300 /* in milliseconds */}
         autoLoad={true}
