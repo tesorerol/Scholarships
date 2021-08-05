@@ -110,12 +110,11 @@ function App() {
   });
   useEffect(() => {
     setSocket(io(server, {
-      cors: {
-        origin: "*",
-        methods: ["GET", "POST"]
+      withCredentials: true,
+      extraHeaders: {
+        "my-custom-header": "cryptoclub"
       }
-    }
-    ))
+    }));
   }, [])
   function Transition() {
     var axie = document.getElementById("axie");
@@ -144,6 +143,9 @@ function App() {
           imageHeight: 200,
           imageAlt: 'Custom image',
         })
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
       } else {
         Swal.fire({
           icon: 'error',
@@ -153,9 +155,7 @@ function App() {
 
       }
     })
-    setTimeout(() => {
-      window.location.reload();
-    }, 2000);
+
   }
 
   return (
