@@ -11,9 +11,26 @@ import Psicologia from './Forms/psicologia';
 import Biografia from './Forms/biografia';
 import Documentos from './Forms/documentos';
 import Swal from 'sweetalert2';
-import Sound from 'react-sound';
+import egg from './egg.png';
+import axie1 from './axie1.png';
+import axie2 from './axie2.png';
+import axie3 from './axie3.png';
+import axie4 from './axie4.png';
+import axie5 from './axie5.png';
+import axie6 from './axie6.png';
+import axie7 from './axie7.png';
 const Nav = (props) => {
+
   const dots = [];
+  const axie = [
+    axie1,
+    axie2,
+    axie3,
+    axie4,
+    axie5,
+    axie6,
+    axie7
+  ]
   for (let i = 1; i <= props.totalSteps; i += 1) {
     const isActive = props.currentStep === i;
     dots.push((
@@ -21,12 +38,12 @@ const Nav = (props) => {
         key={`step-${i}`}
         className={`dot ${isActive ? 'active' : ''}`}
       // onClick={() => props.goToStep(i)}
-      >&bull;</span>
+      ><img className={isActive ? 'AxieFloat' : ''} src={isActive ? axie[Math.floor(Math.random() * axie.length)] : egg} style={{ height: 30, width: isActive ? 40 : 20, display: "inherit", marginLeft: 10, marginRight: 10 }} /></span>
     ));
   }
 
   return (
-    <div className="nav text-center">{dots}</div>
+    <div className="nav text-center mb-4">{dots}</div>
   );
 };
 function App() {
@@ -126,7 +143,7 @@ function App() {
         </div>
 
         : <Home Transition={Transition} />}
-        {/* <Sound
+      {/* <Sound
         url="https://files-ralph.s3.us-east-2.amazonaws.com/bg.wav"
         playStatus={Sound.status.PLAYING}
         playFromPosition={300}
@@ -138,7 +155,7 @@ function App() {
       onFinishedPlaying={this.handleSongFinishedPlaying}
       /> */}
     </div>
-      );
+  );
 }
 
-      export default App;
+export default App;

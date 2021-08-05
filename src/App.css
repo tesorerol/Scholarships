@@ -172,6 +172,17 @@ nav {
   animation: float 6s ease-in-out infinite;
 }
 
+.AxieFloat {
+  z-index: 95;
+  /* box-sizing: border-box; */
+  border-radius: 50%;
+  overflow: hidden;
+  /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+  transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
+}
+
 .fontNunito {
   font-family: Nunito;
 }
