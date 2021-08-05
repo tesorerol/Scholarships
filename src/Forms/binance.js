@@ -4,7 +4,7 @@ import { Validation } from '../Helpers';
 function BinanceDate(props) {
     const { binance, setBinance } = props;
     return (
-        <div className="container flex justify-center justify-items-center">
+        <div className="container flex justify-center justify-items-center" style={{ height: "90vh", overflow: "auto" }}>
             <div className="w-full max-w-xl ">
                 <form className="bg-white shadow-md rounded px-8 pt-2 pb-8 mb-4">
                     <h4 style={{ textAlign: "center", fontSize: "1.5rem" }}>¿Donde vas a recibir tu pago?</h4>

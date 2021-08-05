@@ -4,9 +4,9 @@ import { Validation } from '../Helpers';
 function DatosPersonales(props) {
     const { setData, dato } = props;
     return (
-        <div className="container flex justify-center justify-items-center">
+        <div className="container flex justify-center justify-items-center " style={{ height: "90vh", overflow: "auto" }}>
             <div className="w-full max-w-xl">
-                <form className="bg-white shadow-md rounded px-8 pt-2 pb-8 mb-4">
+                <form className="bg-white shadow-md rounded px-8 pt-2 pb-8 mb-4 overflow-y-auto">
                     <h4 style={{ textAlign: "center", fontSize: "1.5rem" }}>Datos Personales</h4>
                     <hr className="mb-2" />
                     <div className="mb-4">

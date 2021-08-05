@@ -10,7 +10,9 @@ import Home from './Home';
 import Psicologia from './Forms/psicologia';
 import Biografia from './Forms/biografia';
 import Documentos from './Forms/documentos';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import Sound from 'react-sound';
+import sonido from './bg.wav';
 const Nav = (props) => {
   const dots = [];
   for (let i = 1; i <= props.totalSteps; i += 1) {
@@ -107,7 +109,7 @@ function App() {
     <div className="flex justify-center justify-items-center bg-fixed h-screen bg-cover overflow-hidden " style={{ backgroundImage: `url(${Background})` }}>
       {enter
         ?
-        <div className="animate__animated animate__zoomIn" id="form">
+        <div className="animate__animated animate__zoomIn " id="form">
           <StepWizard
             nav={<Nav />}
           >
@@ -125,6 +127,16 @@ function App() {
         </div>
 
         : <Home Transition={Transition} />}
+      <Sound
+        url={sonido}
+        playStatus={Sound.status.PLAYING}
+        // playFromPosition={300 /* in milliseconds */}
+        autoLoad={true}
+        loop={true}
+      // onLoading={this.handleSongLoading}
+      // onPlaying={this.handleSongPlaying}
+      // onFinishedPlaying={this.handleSongFinishedPlaying}
+      />
     </div>
   );
 }
