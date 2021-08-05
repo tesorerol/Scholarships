@@ -12,25 +12,25 @@ function SocialData(props) {
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Link COMPLETO a tu cuenta de Facebook:
                         </label>
-                        <input value={social.fb} onChange={(e) => setSocial({ ...social, fb: e.target.value.trim() })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" />
+                        <input value={social.fb} onChange={(e) => setSocial({ ...social, fb: e.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" />
                     </div>
                     <div className="mb-2">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Link COMPLETO a tu cuenta de Twitter:
                         </label>
-                        <input value={social.tw} onChange={(e) => setSocial({ ...social, tw: e.target.value.trim() })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" />
+                        <input value={social.tw} onChange={(e) => setSocial({ ...social, tw: e.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" />
                     </div>
                     <div className="mb-2">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Link COMPLETO a tu cuenta de Instagram:
                         </label>
-                        <input value={social.ig} onChange={(e) => setSocial({ ...social, ig: e.target.value.trim() })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" />
+                        <input value={social.ig} onChange={(e) => setSocial({ ...social, ig: e.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" />
                     </div>
                     <div className="mb-2">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Otra Red Social:
                         </label>
-                        <input value={social.ot} onChange={(e) => setSocial({ ...social, ot: e.target.value.trim() })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" />
+                        <input value={social.ot} onChange={(e) => setSocial({ ...social, ot: e.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" />
                     </div>
                     <div className="mb-2">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="name">

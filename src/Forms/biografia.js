@@ -21,13 +21,13 @@ function Biografia(props) {
                         </div>
                         <div className="mt-4 space-y-4">
                             <div className="flex items-center">
-                                <input value={biografia.acept} onChange={(e) => setBiografia({ ...biografia, acept: true })} id="push-everything" name="push-notifications" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input value={biografia.aceptBio} onChange={(e) => setBiografia({ ...biografia, aceptBio: true })} id="push-everything" name="push-notifications" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     Si
                                 </label>
                             </div>
                             <div className="flex items-center">
-                                <input value={biografia.acept} onChange={(e) => setBiografia({ ...biografia, acept: false })} id="push-email" name="push-notifications" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input value={biografia.aceptBio} onChange={(e) => setBiografia({ ...biografia, aceptBio: false })} id="push-email" name="push-notifications" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     No
                                 </label>

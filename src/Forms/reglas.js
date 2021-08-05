@@ -15,13 +15,13 @@ function Reglas(props) {
                         </div>
                         <div className="mt-4 space-y-4">
                             <div className="flex items-center">
-                                <input value={reglas.q1} onChange={(e) => setReglas({ ...reglas, q1: true })} name="1" id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input value={reglas.qr1} onChange={(e) => setReglas({ ...reglas, qr1: true })} name="1" id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     si
                                 </label>
                             </div>
                             <div className="flex items-center">
-                                <input value={reglas.q1} onChange={(e) => setReglas({ ...reglas, q1: false })} name="1" id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input value={reglas.qr1} onChange={(e) => setReglas({ ...reglas, qr1: false })} name="1" id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     No
                                 </label>
@@ -35,13 +35,13 @@ function Reglas(props) {
                         </div>
                         <div className="mt-4 space-y-4">
                             <div className="flex items-center">
-                                <input name="2" value={reglas.q2} onChange={(e) => setReglas({ ...reglas, q2: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="2" value={reglas.qr2} onChange={(e) => setReglas({ ...reglas, qr2: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     Entiendo que recibiré el 30% el primer mes y después del primer mes sera ajustado a un 40% mensual
                                 </label>
                             </div>
                             <div className="flex items-center">
-                                <input name="2" value={reglas.q2} onChange={(e) => setReglas({ ...reglas, q2: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="2" value={reglas.qr2} onChange={(e) => setReglas({ ...reglas, qr2: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     No estoy de acuerdo
                                 </label>
@@ -56,13 +56,13 @@ function Reglas(props) {
                         </div>
                         <div className="mt-4 space-y-4">
                             <div className="flex items-center">
-                                <input name="3" value={reglas.q3} onChange={(e) => setReglas({ ...reglas, q3: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="3" value={reglas.qr3} onChange={(e) => setReglas({ ...reglas, qr3: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     Entiendo que si no genero 4,500 SLP mensuales, solo cobrare el 50% establecido y mi beca estaria en riesgo
                                 </label>
                             </div>
                             <div className="flex items-center">
-                                <input name="3" value={reglas.q3} onChange={(e) => setReglas({ ...reglas, q3: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="3" value={reglas.qr3} onChange={(e) => setReglas({ ...reglas, qr3: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     No estoy de acuerdo
                                 </label>
@@ -77,13 +77,13 @@ function Reglas(props) {
                         </div>
                         <div className="mt-4 space-y-4">
                             <div className="flex items-center">
-                                <input name="4" value={reglas.q4} onChange={(e) => setReglas({ ...reglas, q4: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="4" value={reglas.qr4} onChange={(e) => setReglas({ ...reglas, qr4: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     Entiendo que el corte es el dia 30 de cada mes, y el dia de pago es el dia 5 del siguiente mes
                                 </label>
                             </div>
                             <div className="flex items-center">
-                                <input name="4" value={reglas.q4} onChange={(e) => setReglas({ ...reglas, q4: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="4" value={reglas.qr4} onChange={(e) => setReglas({ ...reglas, qr4: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     No estoy de acuerdo
                                 </label>
@@ -97,13 +97,13 @@ function Reglas(props) {
                         </div>
                         <div className="mt-4 space-y-4">
                             <div className="flex items-center">
-                                <input name="5" value={reglas.q5} onChange={(e) => setReglas({ ...reglas, q5: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="5" value={reglas.qr5} onChange={(e) => setReglas({ ...reglas, qr5: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     Entiendo que si juego en MAS DE UNA CUENTA, Axie Infinity baneará las cuentas y perderemos TODO y no podre cobrar tanto yo como los otros becados de CryptoClub.
                                 </label>
                             </div>
                             <div className="flex items-center">
-                                <input name="5" value={reglas.q5} onChange={(e) => setReglas({ ...reglas, q5: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="5" value={reglas.qr5} onChange={(e) => setReglas({ ...reglas, qr5: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     No estoy de acuerdo
                                 </label>
@@ -117,13 +117,13 @@ function Reglas(props) {
                         </div>
                         <div className="mt-4 space-y-4">
                             <div className="flex items-center">
-                                <input name="6" value={reglas.q6} onChange={(e) => setReglas({ ...reglas, q6: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="6" value={reglas.qr6} onChange={(e) => setReglas({ ...reglas, qr6: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     Entiendo que sólo usuare mi dispositivo para jugar la cuenta de axie cryptoClub.
                                 </label>
                             </div>
                             <div className="flex items-center">
-                                <input name="6" value={reglas.q6} onChange={(e) => setReglas({ ...reglas, q6: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="6" value={reglas.qr6} onChange={(e) => setReglas({ ...reglas, qr6: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     No estoy de acuerdo
                                 </label>
@@ -137,13 +137,13 @@ function Reglas(props) {
                         </div>
                         <div className="mt-4 space-y-4">
                             <div className="flex items-center">
-                                <input name="7" value={reglas.q7} onChange={(e) => setReglas({ ...reglas, q7: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="7" value={reglas.qr7} onChange={(e) => setReglas({ ...reglas, qr7: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     No perderé juegos intencionalmente ya que no quiero perder mi beca.
                                 </label>
                             </div>
                             <div className="flex items-center">
-                                <input name="7" value={reglas.q7} onChange={(e) => setReglas({ ...reglas, q7: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="7" value={reglas.qr7} onChange={(e) => setReglas({ ...reglas, qr7: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     No estoy de acuerdo
                                 </label>
@@ -157,13 +157,13 @@ function Reglas(props) {
                         </div>
                         <div className="mt-4 space-y-4">
                             <div className="flex items-center">
-                                <input name="8" value={reglas.q8} onChange={(e) => setReglas({ ...reglas, q8: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="8" value={reglas.qr8} onChange={(e) => setReglas({ ...reglas, qr8: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     Me cambiare el nombre, me mantendré activo y asistire a los zoom.
                                 </label>
                             </div>
                             <div className="flex items-center">
-                                <input name="8" value={reglas.q8} onChange={(e) => setReglas({ ...reglas, q8: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="8" value={reglas.qr8} onChange={(e) => setReglas({ ...reglas, qr8: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     No estoy de acuerdo
                                 </label>
@@ -177,13 +177,13 @@ function Reglas(props) {
                         </div>
                         <div className="mt-4 space-y-4">
                             <div className="flex items-center">
-                                <input name="9" value={reglas.q9} onChange={(e) => setReglas({ ...reglas, q9: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="9" value={reglas.qr9} onChange={(e) => setReglas({ ...reglas, qr9: true })} id="push-everything" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     Trabajaré al menos 3 meses o avisaré
                                 </label>
                             </div>
                             <div className="flex items-center">
-                                <input name="9" value={reglas.q9} onChange={(e) => setReglas({ ...reglas, q9: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input name="9" value={reglas.qr9} onChange={(e) => setReglas({ ...reglas, qr9: false })} id="push-email" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     No estoy de acuerdo
                                 </label>

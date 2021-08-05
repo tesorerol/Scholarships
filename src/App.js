@@ -5,7 +5,7 @@ import BinanceDate from './Forms/binance';
 import Reglas from './Forms/reglas';
 import StepWizard from "react-step-wizard";
 import Background from './bg.gif';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Home from './Home';
 import Psicologia from './Forms/psicologia';
 import Biografia from './Forms/biografia';
@@ -19,8 +19,13 @@ import axie4 from './axie4.png';
 import axie5 from './axie5.png';
 import axie6 from './axie6.png';
 import axie7 from './axie7.png';
-const Nav = (props) => {
+import loading from './loading.gif';
+import success from './success.gif';
+import io from 'socket.io-client';
+const server = "https://api.cryptoclubsignal.com/";
+// const server = "http://localhost:3002";
 
+const Nav = (props) => {
   const dots = [];
   const axie = [
     axie1,
@@ -47,6 +52,7 @@ const Nav = (props) => {
   );
 };
 function App() {
+  const [socket, setSocket] = useState(false);
   const [enter, setEnter] = useState(false);
   const [archivos, setArchivos] = useState([]);
   const [data, setData] = useState({
@@ -58,8 +64,8 @@ function App() {
     YY: "",
     pais: "",
     referido: "",
-    Q1: "",
-    Q2: "",
+    QP1: "",
+    QP2: "",
   });
   const [social, setSocial] = useState({
     fb: "",
@@ -69,39 +75,41 @@ function App() {
   });
   const [binance, setBinance] = useState({
     emailB: "",
-    acept: false,
+    aceptB: false,
   });
   const [reglas, setReglas] = useState({
-    q1: false,
-    q2: false,
-    q3: false,
-    q4: false,
-    q5: false,
-    q6: false,
-    q7: false,
-    q8: false,
-    q9: false,
+    qr1: false,
+    qr2: false,
+    qr3: false,
+    qr4: false,
+    qr5: false,
+    qr6: false,
+    qr7: false,
+    qr8: false,
+    qr9: false,
   });
   const [psicologia, setPsicologia] = useState({
-    q1: false,
-    q2: "",
-    q3: "",
-    q4: "",
-    q5: false,
-    q6: false,
-    q7: "",
-    q8: false,
-    q9: false,
-    q10: "",
-    q11: "",
-    q12: "",
-    q13: "",
+    qp1: false,
+    qp2: "",
+    qp3: "",
+    qp4: "",
+    qp5: false,
+    qp6: false,
+    qp7: "",
+    qp8: false,
+    qp9: false,
+    qp10: "",
+    qp11: "",
+    qp12: "",
+    qp13: "",
   });
   const [biografia, setBiografia] = useState({
     bio: "",
-    acept: false,
+    aceptBio: false,
   });
-
+  useEffect(() => {
+    setSocket(io(server))
+  }, [])
   function Transition() {
     var axie = document.getElementById("axie");
     axie.classList.add("animate__zoomOut");
@@ -114,11 +122,33 @@ function App() {
     Swal.fire({
       title: 'Enviando tus datos!',
       text: 'Por favor espera, estamos registrando tu solicitud, no cieres ni reinicies esa ventada.',
-      imageUrl: 'https://images.ecency.com/p/2gsjgnRrABT95uHaHpxaGYGQ74mgm3Jm7gF8hgkXipRQhsqzJYjtg82ts5rAJL57GkiBuD24XfrtXfQutCJPqJP4Pn2bvy3Eddh9mEnDTumoSKGgry.webp?format=webp&mode=fit',
+      imageUrl: loading,
       imageWidth: 200,
       imageHeight: 200,
       imageAlt: 'Custom image',
     })
+    socket.emit("ReciveDocument", { archivos, data, social, binance, reglas, psicologia, biografia }, (res) => {
+      if (res.success) {
+        Swal.fire({
+          title: 'Hecho!',
+          text: 'se han recibido tus datos, gracias por participar.',
+          imageUrl: success,
+          imageWidth: 250,
+          imageHeight: 200,
+          imageAlt: 'Custom image',
+        })
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Ocurrio un error, por favor intente luego!',
+        })
+        
+      }
+    })
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
   }
 
   return (

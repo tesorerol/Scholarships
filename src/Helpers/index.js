@@ -48,31 +48,31 @@ export const formatMoney = (amount, moneda = "", decimalCount = false, decimal =
 export const Validation = (type, data) => {
     switch (type) {
         case 'personal':
-            if (data.fullName && data.discord && data.email && data.DD && data.MM && data.YY && data.pais && data.Q1 && data.Q2) {
+            if (data.fullName && data.discord && data.email && data.DD && data.MM && data.YY && data.pais && data.QP1 && data.QP2) {
                 return true;
             } else {
                 return false;
             }
         case 'binance':
-            if (data.emailB && data.acept) {
+            if (data.emailB && data.aceptB) {
                 return true;
             } else {
                 return false;
             }
         case 'reglas':
-            if (data.q1 && data.q2 && data.q3 && data.q4 && data.q5 && data.q6 && data.q7 && data.q8 && data.q9) {
+            if (data.qr1 && data.qr2 && data.qr3 && data.qr4 && data.qr5 && data.qr6 && data.qr7 && data.qr8 && data.qr9) {
                 return true;
             } else {
                 return false;
             }
         case 'psicologia':
-            if (data.q1 && data.q2 && data.q3 && data.q4 && data.q5 && data.q6 && data.q7 && data.q8 && data.q9 && data.q10 && data.q11 && data.q12 && data.q13) {
+            if (data.qp1 && data.qp2 && data.qp3 && data.qp4 && data.qp5 && data.qp6 && data.qp7 && data.qp8 && data.qp9 && data.qp10 && data.qp11 && data.qp12 && data.qp13) {
                 return true;
             } else {
                 return false;
             }
         case 'bio':
-            if (data.bio && data.acept) {
+            if (data.bio && data.aceptBio) {
                 return true;
             } else {
                 return false;

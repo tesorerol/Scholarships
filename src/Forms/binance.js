@@ -13,7 +13,7 @@ function BinanceDate(props) {
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Mi correo electrónico para P2P en binance: <span style={{ color: "red " }}>( * )</span>
                         </label>
-                        <input value={binance.emailB} onChange={(e) => setBinance({ ...binance, emailB: e.target.value.trim() })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" />
+                        <input value={binance.emailB} onChange={(e) => setBinance({ ...binance, emailB: e.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" />
                     </div>
                     <fieldset className="mb-2">
                         <div>
@@ -21,13 +21,13 @@ function BinanceDate(props) {
                         </div>
                         <div className="mt-4 space-y-4 mb-6">
                             <div className="flex items-center">
-                                <input value={binance.acept} onChange={(e) => setBinance({ ...binance, acept: true })} id="push-everything" name="push-notifications" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input value={binance.aceptB} onChange={(e) => setBinance({ ...binance, aceptB: true })} id="push-everything" name="push-notifications" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     Lo entiendo y será mi culpa y no culpare a CryptoClub <span style={{ color: "red " }}>( * )</span>
                                 </label>
                             </div>
                             <div className="flex items-center">
-                                <input value={binance.acept} onChange={(e) => setBinance({ ...binance, acept: false })} id="push-email" name="push-notifications" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input value={binance.aceptB} onChange={(e) => setBinance({ ...binance, aceptB: false })} id="push-email" name="push-notifications" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label for="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     No estoy de acuerdo
                                 </label>
