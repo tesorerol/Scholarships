@@ -133,6 +133,7 @@ function App() {
         // playFromPosition={300 /* in milliseconds */}
         autoLoad={true}
         loop={true}
+        volume={60}
       // onLoading={this.handleSongLoading}
       // onPlaying={this.handleSongPlaying}
       // onFinishedPlaying={this.handleSongFinishedPlaying}
