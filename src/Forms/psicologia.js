@@ -42,7 +42,7 @@ function Psicologia(props) {
                     </div>
                     <div className="mb-2">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
-                            3) ¿En tu trabao actual, o anterior, o tus estudios, en que situacion dificil te encontrastes y como la solucionastes?: <span style={{ color: "red " }}>( * )</span>
+                            3) ¿En tu trabajo actual, o anterior, o tus estudios, en que situacion dificil te encontrastes y como la solucionastes?: <span style={{ color: "red " }}>( * )</span>
                         </label>
                         <textarea value={psicologia.qp3} onChange={(e) => setPsicologia({ ...psicologia, qp3: e.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" />
                     </div>

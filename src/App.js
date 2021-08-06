@@ -5,7 +5,7 @@ import BinanceDate from './Forms/binance';
 import Reglas from './Forms/reglas';
 import StepWizard from "react-step-wizard";
 import Background from './bg.gif';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Home from './Home';
 import Psicologia from './Forms/psicologia';
 import Biografia from './Forms/biografia';
@@ -21,11 +21,6 @@ import axie6 from './axie6.png';
 import axie7 from './axie7.png';
 import loading from './loading.gif';
 import success from './success.gif';
-import io from 'socket.io-client';
-import ReactAudioPlayer from 'react-audio-player';
-const server = "https://api.cryptoclubsignal.com/";
-// const server = "http://localhost:3002";
-
 const Nav = (props) => {
   const dots = [];
   const axie = [
@@ -52,8 +47,8 @@ const Nav = (props) => {
     <div className="nav text-center mb-4">{dots}</div>
   );
 };
-function App() {
-  const [socket, setSocket] = useState(false);
+function App(props) {
+  const { socket } = props;
   const [enter, setEnter] = useState(false);
   const [archivos, setArchivos] = useState([]);
   const [data, setData] = useState({
@@ -108,14 +103,6 @@ function App() {
     bio: "",
     aceptBio: false,
   });
-  useEffect(() => {
-    setSocket(io(server, {
-      withCredentials: true,
-      extraHeaders: {
-        "my-custom-header": "cryptoclub"
-      }
-    }));
-  }, [])
   function Transition() {
     var axie = document.getElementById("axie");
     axie.classList.add("animate__zoomOut");
@@ -132,6 +119,9 @@ function App() {
       imageWidth: 200,
       imageHeight: 200,
       imageAlt: 'Custom image',
+      showConfirmButton: false,
+      allowEnterKey:false,
+      allowEscapeKey:false
     })
     socket.emit("ReciveDocument", { archivos, data, social, binance, reglas, psicologia, biografia }, (res) => {
       if (res.success) {
@@ -150,7 +140,7 @@ function App() {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'Ocurrio un error, por favor intente luego!',
+          text: res.error == "general" ? 'Ocurrio un error, por favor intente luego!' : res.error,
         })
 
       }
@@ -180,22 +170,6 @@ function App() {
         </div>
 
         : <Home Transition={Transition} />}
-      {/* <Sound
-        url="https://files-ralph.s3.us-east-2.amazonaws.com/bg.wav"
-        playStatus={Sound.status.PLAYING}
-        playFromPosition={300}
-        autoLoad={true}
-        loop={true}
-        volume={5}
-      onLoading={this.handleSongLoading}
-      onPlaying={this.handleSongPlaying}
-      onFinishedPlaying={this.handleSongFinishedPlaying}
-      /> */}
-
-      {/* <ReactAudioPlayer
-        src="https://files-ralph.s3.us-east-2.amazonaws.com/bg.wav"
-        autoPlay
-      /> */}
     </div>
   );
 }
