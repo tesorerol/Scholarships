@@ -21,6 +21,7 @@ import axie6 from './axie6.png';
 import axie7 from './axie7.png';
 import loading from './loading.gif';
 import success from './success.gif';
+import Regreso from './Forms/regreso';
 const Nav = (props) => {
   const dots = [];
   const axie = [
@@ -120,8 +121,8 @@ function App(props) {
       imageHeight: 200,
       imageAlt: 'Custom image',
       showConfirmButton: false,
-      allowEnterKey:false,
-      allowEscapeKey:false
+      allowEnterKey: false,
+      allowEscapeKey: false
     })
     socket.emit("ReciveDocument", { archivos, data, social, binance, reglas, psicologia, biografia }, (res) => {
       if (res.success) {
@@ -150,7 +151,7 @@ function App(props) {
 
   return (
     <div className="flex justify-center justify-items-center bg-fixed h-screen bg-cover overflow-hidden " style={{ backgroundImage: `url(${Background})` }}>
-      {enter
+      {/* {enter
         ?
         <div className="animate__animated animate__zoomIn " id="form">
           <StepWizard
@@ -169,7 +170,8 @@ function App(props) {
           </p>
         </div>
 
-        : <Home Transition={Transition} />}
+        : <Home Transition={Transition} />} */}
+      <Regreso />
     </div>
   );
 }

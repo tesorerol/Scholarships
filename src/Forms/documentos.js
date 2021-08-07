@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { formatSize, Validation } from '../Helpers';
-
+import Compress from "react-image-file-resizer";
 function Documentos(props) {
     const { funcion, archivos, setArchivos } = props;
 

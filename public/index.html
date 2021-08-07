@@ -30,45 +30,45 @@
   </div>
   <!-- <button id="btn">trigger notification</button> -->
   <script>
-    const audio = new Audio( 'https://files-ralph.s3.us-east-2.amazonaws.com/bg.mp3' );
-    const alert_elem = document.querySelector('.alert');
+    // const audio = new Audio( 'https://files-ralph.s3.us-east-2.amazonaws.com/bg.mp3' );
+    // const alert_elem = document.querySelector('.alert');
 
-    audio.play().then(() => {
-      // already allowed
-      alert_elem.remove();
-      // resetAudio();
-    })
-      .catch(() => {
-        // need user interaction
-        setTimeout(() => {
-          audio.play();
-          console.log("audio enviado")
-        }, 3000);
-        alert_elem.addEventListener('click', ({ target }) => {
-          if (target.matches('button')) {
-            const allowed = target.value === "1";
-            if (allowed) {
-              audio.play();
-            }
-            alert_elem.remove();
-          }
-        });
-      });
+    // audio.play().then(() => {
+    //   // already allowed
+    //   alert_elem.remove();
+    //   // resetAudio();
+    // })
+    //   .catch(() => {
+    //     // need user interaction
+    //     setTimeout(() => {
+    //       audio.play();
+    //       console.log("audio enviado")
+    //     }, 3000);
+    //     alert_elem.addEventListener('click', ({ target }) => {
+    //       if (target.matches('button')) {
+    //         const allowed = target.value === "1";
+    //         if (allowed) {
+    //           audio.play();
+    //         }
+    //         alert_elem.remove();
+    //       }
+    //     });
+    //   });
 
-    document.getElementById('btn').addEventListener('click', (e) => {
-      if (audio.muted) {
-        console.log('silent notification');
-      }
-      else {
-        audio.play();
-      }
-    });
+    // document.getElementById('btn').addEventListener('click', (e) => {
+    //   if (audio.muted) {
+    //     console.log('silent notification');
+    //   }
+    //   else {
+    //     audio.play();
+    //   }
+    // });
 
-    function resetAudio() {
-      audio.pause();
-      audio.currentTime = 0;
-      audio.muted = false;
-    }
+    // function resetAudio() {
+    //   audio.pause();
+    //   audio.currentTime = 0;
+    //   audio.muted = false;
+    // }
 
   </script>
 </body>
