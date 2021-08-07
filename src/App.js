@@ -113,46 +113,45 @@ function App(props) {
   }
 
   function SendDocument() {
-    console.log({ archivos, data, social, binance, reglas, psicologia, biografia });
-    // Swal.fire({
-    //   title: 'Enviando tus datos!',
-    //   text: 'Por favor espera, estamos registrando tu solicitud, no cierres ni reinicies esta ventana.',
-    //   imageUrl: loading,
-    //   imageWidth: 200,
-    //   imageHeight: 200,
-    //   imageAlt: 'Custom image',
-    //   showConfirmButton: false,
-    //   allowEnterKey: false,
-    //   allowEscapeKey: false
-    // })
-    // socket.emit("ReciveDocument", { archivos, data, social, binance, reglas, psicologia, biografia }, (res) => {
-    //   if (res.success) {
-    //     Swal.fire({
-    //       title: 'Hecho!',
-    //       text: 'se han recibido tus datos, gracias por participar.',
-    //       imageUrl: success,
-    //       imageWidth: 250,
-    //       imageHeight: 200,
-    //       imageAlt: 'Custom image',
-    //     })
-    //     setTimeout(() => {
-    //       window.location.reload();
-    //     }, 2000);
-    //   } else {
-    //     Swal.fire({
-    //       icon: 'error',
-    //       title: 'Oops...',
-    //       text: res.error == "general" ? 'Ocurrio un error, por favor intente luego!' : res.error,
-    //     })
+    Swal.fire({
+      title: 'Enviando tus datos!',
+      text: 'Por favor espera, estamos registrando tu solicitud, no cierres ni reinicies esta ventana.',
+      imageUrl: loading,
+      imageWidth: 200,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+      showConfirmButton: false,
+      allowEnterKey: false,
+      allowEscapeKey: false
+    })
+    socket.emit("ReciveDocument", { archivos, data, social, binance, reglas, psicologia, biografia }, (res) => {
+      if (res.success) {
+        Swal.fire({
+          title: 'Hecho!',
+          text: 'se han recibido tus datos, gracias por participar.',
+          imageUrl: success,
+          imageWidth: 250,
+          imageHeight: 200,
+          imageAlt: 'Custom image',
+        })
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: res.error == "general" ? 'Ocurrio un error, por favor intente luego!' : res.error,
+        })
 
-    //   }
-    // })
+      }
+    })
 
   }
 
   return (
     <div className="flex justify-center justify-items-center bg-fixed h-screen bg-cover overflow-hidden " style={{ backgroundImage: `url(${Background})` }}>
-      {/* {enter
+      {enter
         ?
         <div className="animate__animated animate__zoomIn " id="form">
           <StepWizard
@@ -171,8 +170,8 @@ function App(props) {
           </p>
         </div>
 
-        : <Home Transition={Transition} />} */}
-      <Regreso />
+        : <Home Transition={Transition} />}
+      {/* <Regreso /> */}
     </div>
   );
 }
