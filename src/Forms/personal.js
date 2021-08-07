@@ -92,13 +92,13 @@ function DatosPersonales(props) {
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="id">
                             ¿Hay otra persona jugando axie infinity en tu mismo hogar? <span style={{ color: "red " }}>( * )</span>
                         </label>
-                        <textarea value={dato.QP1} onChange={(e) => setData({ ...dato, QP1: e.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="id"></textarea>
+                        <textarea value={dato.qpu1} onChange={(e) => setData({ ...dato, qpu1: e.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="id"></textarea>
                     </div>
                     <div className="mb-2">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="id">
                             ¿Por que es importante para ti recibir una cuenta? <span style={{ color: "red " }}>( * )</span>
                         </label>
-                        <textarea value={dato.QP2} onChange={(e) => setData({ ...dato, QP2: e.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="id"></textarea>
+                        <textarea value={dato.qpu2} onChange={(e) => setData({ ...dato, qpu2: e.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="id"></textarea>
                     </div>
 
                     <div className="flex items-end justify-end">

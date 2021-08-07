@@ -61,8 +61,8 @@ function App(props) {
     YY: "",
     pais: "",
     referido: "",
-    QP1: "",
-    QP2: "",
+    qpu1: "",
+    qpu2: "",
   });
   const [social, setSocial] = useState({
     fb: "",
@@ -115,7 +115,7 @@ function App(props) {
   function SendDocument() {
     Swal.fire({
       title: 'Enviando tus datos!',
-      text: 'Por favor espera, estamos registrando tu solicitud, no cieres ni reinicies esa ventada.',
+      text: 'Por favor espera, estamos registrando tu solicitud, no cierres ni reinicies esta ventana.',
       imageUrl: loading,
       imageWidth: 200,
       imageHeight: 200,
@@ -151,7 +151,7 @@ function App(props) {
 
   return (
     <div className="flex justify-center justify-items-center bg-fixed h-screen bg-cover overflow-hidden " style={{ backgroundImage: `url(${Background})` }}>
-      {/* {enter
+      {enter
         ?
         <div className="animate__animated animate__zoomIn " id="form">
           <StepWizard
@@ -170,8 +170,8 @@ function App(props) {
           </p>
         </div>
 
-        : <Home Transition={Transition} />} */}
-      <Regreso />
+        : <Home Transition={Transition} />}
+      {/* <Regreso /> */}
     </div>
   );
 }

@@ -6,7 +6,7 @@ function Documentos(props) {
     const { funcion, archivos, setArchivos } = props;
 
     const onDrop = useCallback((acceptedFiles) => {
-        var permitidos = ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/png', 'image/jpeg', 'application/pdf']
+        var permitidos = ['image/png', 'image/jpeg', 'image/jpg',]
 
         acceptedFiles.forEach((file) => {
             if (!(permitidos.indexOf(file.type) > -1)) { alert("El archivo " + file.name + " no puede ser subido, debido a una extención no permitida", "error"); return; }
@@ -43,7 +43,7 @@ function Documentos(props) {
                                     <div className="dropzone-msg dz-message needsclick">
                                         <input {...getInputProps()} accept="image/*,.doc,.docx,.xlsx,.xlx,.pdf" />
                                         <h3 className="dropzone-msg-title">Selecciona o arrastra tus evidencias aqui.</h3>
-                                        <span className="dropzone-msg-desc">Solo esta permitido archivos de Imagenes (.jpg,.png) y Documentos (Word,excel,pdf)</span><br />
+                                        <span className="dropzone-msg-desc">Solo esta permitido archivos de Imagenes (.jpg,.jpeg,.png)</span><br />
                                         <span className="dropzone-msg-desc">Tamaño maximo permitido por archivo es de 3 MB</span>
                                     </div>
                                 </section>

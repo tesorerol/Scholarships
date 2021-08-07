@@ -48,7 +48,7 @@ export const formatMoney = (amount, moneda = "", decimalCount = false, decimal =
 export const Validation = (type, data) => {
     switch (type) {
         case 'personal':
-            if (data.fullName && data.discord && data.email && data.DD && data.MM && data.YY && data.pais && data.QP1 && data.QP2) {
+            if (data.fullName && data.discord && data.email && data.DD && data.MM && data.YY && data.pais && data.qpu2 && data.qpu2) {
                 return true;
             } else {
                 return false;
